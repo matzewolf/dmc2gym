@@ -50,6 +50,7 @@ class DMCWrapper(core.Env):
         channels_first=True
     ):
         assert 'random' in task_kwargs, 'please specify a seed, for deterministic behaviour'
+        self._domain_name = domain_name
         self._from_pixels = from_pixels
         self._height = height
         self._width = width
